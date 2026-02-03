@@ -42,11 +42,6 @@
         <button id="loveButton">clique aqui UwU</button>
         <p id="loveMessage" style="display: none;">eu te amo💕</p>
 
-        <div class="music-section">
-            <button id="musicButton">🎵 Tocar Música 💕</button>
-            <div id="playerContainer"></div>
-        </div>
-
     </div>
     
 
@@ -88,26 +83,6 @@
             this.classList.remove('bounce');
             void this.offsetWidth;
             this.classList.add('bounce');
-        });
-        
-        // Botão de música
-        let isPlaying = false;
-        
-        document.getElementById('musicButton').addEventListener('click', function() {
-            const container = document.getElementById('playerContainer');
-            
-            if (!isPlaying) {
-                // Criar iframe para tocar música
-                container.innerHTML = '<iframe width="0" height="0" src="https://www.youtube.com/embed/t8_2g4W8i3k?autoplay=1&loop=1&controls=0" frameborder="0" allow="autoplay; encrypted-media"></iframe>';
-                this.textContent = '⏸️ Pausar Música 💕';
-                this.style.backgroundColor = '#b450b4';
-                isPlaying = true;
-            } else {
-                container.innerHTML = '';
-                this.textContent = '🎵 Tocar Música 💕';
-                this.style.backgroundColor = 'rgb(206, 107, 206)';
-                isPlaying = false;
-            }
         });
     </script>
 </body>
