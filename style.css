@@ -114,11 +114,75 @@ p {
     font-size: 2em;
     color: rgb(206, 107, 206);
     margin: 20px 0;
-    animation: messagePop 0.5s ease-out;
+    animation: slideDown 0.6s ease-out;
+    transform-origin: top;
 }
 
-@keyframes messagePop {
-    0% { transform: scale(0); opacity: 0; }
-    70% { transform: scale(1.2); }
-    100% { transform: scale(1); opacity: 1; }
+.floating-heart {
+    position: fixed;
+    pointer-events: none;
+    animation: floatHeart 2s ease-out forwards;
+    z-index: 9999;
+}
+
+@keyframes floatHeart {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(0.5) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-200px) scale(1.2) rotate(360deg);
+    }
+}
+
+.music-section {
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+#musicButton {
+    background-color: rgb(206, 107, 206);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.3em;
+    font-family: 'Pacifico', cursive;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(206, 107, 206, 0.4);
+}
+
+#musicButton:hover {
+    background-color: rgb(180, 80, 180);
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(206, 107, 206, 0.6);
+}
+
+#musicButton:active {
+    transform: scale(0.95);
+}
+
+@keyframes slideDown {
+    0% { 
+        transform: translateY(-400px) scale(0.3); 
+        opacity: 0; 
+    }
+    30% {
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(10px) scale(1.1);
+    }
+    70% {
+        transform: translateY(-5px) scale(0.95);
+    }
+    85% {
+        transform: translateY(3px) scale(1.02);
+    }
+    100% { 
+        transform: translateY(0) scale(1); 
+        opacity: 1; 
+    }
 }
