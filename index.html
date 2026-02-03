@@ -36,7 +36,7 @@
         <p>Espero que goste! Com todo o meu amor.</p>
         <p>Sempre q ficar triste pd falar cmg 💕</p>
         <p>Amo vc dms bbzuda </p>
-        <p><img src="c9535857-065d-47e3-94c2-c96a8770f0a0.jpg" alt="(uma foto sua caso nn tenha carregado)"> </p>
+        <p><img id="photo" class="clickable-photo" src="c9535857-065d-47e3-94c2-c96a8770f0a0.jpg" alt="(uma foto sua caso nn tenha carregado)"> </p>
         <p><a href="https://www.youtube.com/watch?v=cu71GJlMHzY">videos de gatinhos caso queira</a>   </p>
 
         <button id="loveButton">clique aqui UwU</button>
@@ -48,6 +48,12 @@
     <script>
         document.getElementById('loveButton').addEventListener('click', function() {
             document.getElementById('loveMessage').style.display = 'block';
+        });
+        
+        document.getElementById('photo').addEventListener('click', function() {
+            this.classList.remove('bounce');
+            void this.offsetWidth;
+            this.classList.add('bounce');
         });
     </script>
 </body>
