@@ -1,0 +1,5 @@
+- [x] Adicionar botão no HTML dentro do container
+- [x] Adicionar elemento para exibir a mensagem (inicialmente oculto)
+- [x] Usar JavaScript para mostrar a mensagem ao clicar no botão
+- [x] Estilizar o botão no CSS para combinar com o tema
+- [x] Alterar texto do botão para "clique aqui UwU"
