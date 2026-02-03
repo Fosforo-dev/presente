@@ -88,18 +88,37 @@ p {
     cursor: pointer;
     margin: 20px 0;
     transition: transform 0.2s, background-color 0.3s;
+    animation: pulse 2s infinite;
 }
 
 #loveButton:hover {
     background-color: rgb(180, 80, 180);
+    animation: buttonBounce 0.5s ease;
 }
 
 #loveButton:active {
     transform: scale(0.95);
 }
 
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(206, 107, 206, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(206, 107, 206, 0); }
+}
+
+@keyframes buttonBounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
 #loveMessage {
     font-size: 2em;
     color: rgb(206, 107, 206);
     margin: 20px 0;
+    animation: messagePop 0.5s ease-out;
+}
+
+@keyframes messagePop {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.2); }
+    100% { transform: scale(1); opacity: 1; }
 }
