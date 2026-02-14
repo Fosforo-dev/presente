@@ -36,6 +36,26 @@
         <p>Espero que goste! Com todo o meu amor.</p>
         <p>Sempre q ficar triste pd falar cmg 💕</p>
         <p>Amo vc dms bbzuda </p>
+        
+        <div class="letter-container">
+            <div class="letter-icon" id="letterIcon">💌</div>
+        <div class="letter-message" id="letterMessage">
+            <p>14/02/2026</p>
+            <p>Feliz dia dos namorados (nos eua).</p>
+            <p>uma linda pra uma pessoa mais ainda rs</p>
+            <br>
+            <p>Meu amor, meu unico amor, acho q nn posso escrever linhas de codigos suficientes para te mostrar um pouquinho do quanto eu te amo, nem no codigo mais perfeito a tanta beleza igual vc, deixando a nerdice de lado, falando agora do quanto vc é bela, acho q nem em outro multiverso eu encontraria alguem igual você, por isso vc é tão especial pra mim, pela sua forma de ser tão unica.</p>
+            <br>
+            <p>Nem em 300 linguas q existisse, averia uma palavra que pudesse descrever tal perfeição que é vc. Talvez até existe a chance de existir, porque se vc pedisse com carinho, eu a inventaria e com um beijinho no final, apenas pra te ver sorrir uma vez.</p>
+            <br>
+            <p>Se pudesse eu te ajudaria a completar qualquer sonho q você tivesse, apenas pra ver vc feliz.</p>
+            <br>
+            <p>eu te amo</p>
+            <p>com amor gui gui.</p>
+            <p>-- Guilherme</p>
+        </div>
+        </div>
+        
         <p><img id="photo" class="clickable-photo" src="c9535857-065d-47e3-94c2-c96a8770f0a0.jpg" alt="(uma foto sua caso nn tenha carregado)"> </p>
         <p><a href="https://www.youtube.com/watch?v=cu71GJlMHzY">videos de gatinhos caso queira</a>   </p>
 
@@ -83,6 +103,12 @@
             this.classList.remove('bounce');
             void this.offsetWidth;
             this.classList.add('bounce');
+        });
+        
+        // Letter functionality
+        document.getElementById('letterIcon').addEventListener('click', function() {
+            const message = document.getElementById('letterMessage');
+            message.classList.toggle('show');
         });
     </script>
 </body>
