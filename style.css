@@ -243,14 +243,15 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
+    margin-top: 80px;
     animation: fadeIn 1s ease-out;
 }
 
 .welcome-text {
     font-size: 4em;
     margin: 20px 0;
-    animation: pulse 2s infinite;
+    animation: pulseWelcome 2s infinite;
 }
 
 .welcome-subtext {
@@ -270,7 +271,7 @@ p {
     cursor: pointer;
     margin-top: 40px;
     transition: transform 0.3s, box-shadow 0.3s;
-    animation: bounce 2s infinite;
+    animation: bounceWelcome 2s infinite;
 }
 
 .enter-button:hover {
@@ -283,12 +284,12 @@ p {
     100% { opacity: 1; }
 }
 
-@keyframes pulse {
+@keyframes pulseWelcome {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.05); }
 }
 
-@keyframes bounce {
+@keyframes bounceWelcome {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
